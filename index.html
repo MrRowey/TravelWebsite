@@ -13,147 +13,42 @@
 
     </head>
     <body>
-        <div class="container">
-            <header class="flexContainer">
-                <div class="flexCol1" id="logo">
-                    <a href="/"></a>
+            <nav>
+                <div class="nav-container">
+                    <a href="#home" class="logo">
+                        <img src="/images/logo.png" alt="logo">
+                    </a>
+                    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+                    <ul class="nav-bar">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#about">Holiday Offers</a></li>
+                        <li class="dropdown">
+                            <a href="#services" class="dropbtn">Services</a>
+                            <div class="dropdown-content">
+                                <a href="#web-design">Web Design</a>
+                                <a href="#seo">SEO</a>
+                                <a href="#marketing">Marketing</a>
+                            </div>
+                        </li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
-                <nav class="flexCol4">
-                    <div class="mobile_control"></div>
-                    <div class="mobile_nav"></div>
-                    <div class="nav">
-                        <ul>
-                            <li>
-                                <a href="/" title="Home" class="navOn">Home</a>
-                            </li>
-                            <li>
-                                <a href="/holidayOffers" title="Offers" >Holiday Offers</a>
-                            </li>
-                            <li class="drop">
-                                <span>Travel Services</span>
-                                <ul>
-                                    <li>
-                                        <a href="/holidayTravelServices" title="Holiday & Travel Services">Holiday &amp; Travel Services</a>
-                                    </li>
-                                    <li>
-                                        <a href="/foreighTravelAdvice" title="Foreign Travel Advice">Foreign Travel Advice</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="/travelExtras" title="Travel Extras">Travel Extras</a>
-                            </li>
-                            <li>
-                                <a href="/meetTheTeam" title="Meet the Team"> Meet The Team</a>
-                            </li>
-                            <li>
-                                <a href="/contact" title="Contact">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-            <section class="carrosel">
-                <div class="carroselImgs"></div>
-                <div class="carroselNav"></div>
-                <div class="carroselDots"></div>
-            </section>
-            <main class="homepage">
-                <section class="intro">
+            </nav>
+            <script>
+        function toggleMenu() {
+            var navBar = document.getElementById("nav-bar");
+            var menuIcon = document.getElementById("menu-icon");
+            navBar.classList.toggle("active");
+            if (navBar.classList.contains("active")) {
+                menuIcon.innerHTML = "&#10005;";  // Close icon
+            } else {
+                menuIcon.innerHTML = "&#9776;";  // Hamburger icon
+            }
+        }
 
-                    <h1>Welcome to Terry Jones Travel</h1>
-                    <p>Terry Jones has worked in the travel industry for over 40 years. In 1992 he established Terry Jones Travel in Sandford Avenue, Church Stretton, Shropshire, which has been trading successfully as an independent Travel Agency ever since.</p>
-                    <br>
-                    <p>In 2013 Terry Jones Travel was pleased to open a new branch of the Travel Agency in Ludlow. Situated at the top of Castle Square, Ludlow, next to Ludlow College, here we also offer a personal , professional and totally independent travel service to the people of South Shropshire.</p>
-                </section>
-                <section class="opeingHours_Address">
-                    <div id="Open">
-                        <h2>Office Opening Hours</h2>
-                        <table>
-                            <tr>
-                                <th></th>
-                                <th>Church Stretton</th>
-                                <th>Ludlow</th>
-                            </tr>
-                            <tr>
-                                <th>Monday</th>
-                                <td>9:30am - 5:00pm</td>
-                                <td>9:30am - 5:00pm</td>
-                            </tr>
-                            <tr>
-                                <th>Tuesday</th>
-                                <td>9:30am - 5:00pm</td>
-                                <td>9:30am - 5:00pm</td>
-                            </tr>
-                            <tr>
-                                <th>Wednesday</th>
-                                <td>9:30am - 5:00pm</td>
-                                <td>9:30am - 5:00pm</td>
-                            </tr>
-                            <tr>
-                                <th>Thursday</th>
-                                <td>9:30am - 5:00pm</td>
-                                <td>9:30am - 5:00pm</td>
-                            </tr>
-                            <tr>
-                                <th>Friday</th>
-                                <td>9:30am - 5:00pm</td>
-                                <td>9:30am - 5:00pm</td>
-                            </tr>
-                            <tr>
-                                <th>Saturday</th>
-                                <td>9:30am - 5:00pm</td>
-                                <td>9:30am - 5:00pm</td>
-                            </tr>
-                            <tr>
-                                <th>Sunday</th>
-                                <td>Closed</td>
-                                <td>Closed</td>
-                            </tr>
-                        </table>
-
-                        <h3>Church Stretton</h3>
-                        <address>
-                            Address: 2 Sandford Avenue, Church Stretton, SY6 6BW <br>
-                            Email: <a href="mailto:enquiries@terryjonestravel.com">enquiries@terryjonestravel.com</a><br>
-                            Contact Tel: 01694 723000 <br>
-                            EMERGENCY Tel: 07801 335130
-                        </address>
-
-                        <h3>Ludlow</h3>
-                        <address>
-                            Address: Castle Square, Ludlow, SY8 1AY <br>
-                            Email: <a href="mailto:ludlow@terryjonestravel.com">ludlow@terryjonestravel.com</a><br>
-                            Contact Tel: 01584 879484 <br>
-                            EMERGENCY Tel: 07801 335130
-                        </address>
-                    </div>
-                </section>
-                <section class="traditional">
-                    <h2>We are proud to be a traditional, independent Travel Agency.</h2>
-                    <div>
-                        <div>
-                            <p>Financial Protection - We are an ABTA Bonded Member, ABTA Numbers D1616 and P6255.</p>
-                        </div>
-                        <div>
-                            No Card Fees - We make no charges for payments by Mastercard or Visa credit cards and no charges for payments by any debit cards.
-                        </div>
-                        <div>
-                            Get in Touch - Our website is constantly being updated so please contact us by either emailing, calling or visiting one of our offices in either Church Stretton or Ludlow, Shropshire. The personal touch is still invaluable and we are always happy to help.
-                        </div>
-                    </div>
-                </section>
-                <section class="abta">
-                    <h2>WE ARE ABTA MEMBERS</h2>
-                    <img src="/images/abta-logo.jpg">
-                    <a class="button" href="https://www.abta.com/" target="_blank"> ABTA Numbers D1616 &amp; P6255</a>
-                </section>
-                <section class="brands">
-
-
-                </section>
-            </main>
-        </div>
+            </script>
+        </body>
+        
         <footer>
             <section class="footerContact">
                 <div class="socials">
