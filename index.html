@@ -10,7 +10,7 @@
         <meta property="og:type" content="website">
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="/style/index.css">
-
+        <link rel="script" href="/script/navbarDropdown.js">
     </head>
     <body>
             <nav>
@@ -34,19 +34,6 @@
                     </ul>
                 </div>
             </nav>
-            <script>
-        function toggleMenu() {
-            var navBar = document.getElementById("nav-bar");
-            var menuIcon = document.getElementById("menu-icon");
-            navBar.classList.toggle("active");
-            if (navBar.classList.contains("active")) {
-                menuIcon.innerHTML = "&#10005;";  // Close icon
-            } else {
-                menuIcon.innerHTML = "&#9776;";  // Hamburger icon
-            }
-        }
-
-            </script>
         </body>
         
         <footer>
